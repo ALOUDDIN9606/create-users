@@ -60,7 +60,7 @@ const CreateUser = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+    <div className="min-h-screen flex items-center justify-center bg-[url('https://as2.ftcdn.net/v2/jpg/06/03/05/09/1000_F_603050959_bNT9FCuazQRwqvl5C7i1p1jeiKDZt7Av.jpg')] bg-cover bg-center">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
           {editingUser ? "Edit User" : "Create User"}

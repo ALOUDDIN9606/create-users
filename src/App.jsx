@@ -7,9 +7,9 @@ import Users from './pages/Users';
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex">
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow flex-1">
           <Routes>
             <Route path="/create" element={<CreateUser />} />
             <Route path="/users" element={<Users />} />

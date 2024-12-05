@@ -5,37 +5,34 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg fixed w-full"
+      className="w-[20%] min-h-screen pl-10 bg-[url('https://as2.ftcdn.net/v2/jpg/08/56/45/55/1000_F_856455528_cej2Ab07SukGDZWvk9B3oECAYy3VEH9x.jpg')] bg-cover bg-center"
     >
-      <nav className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-4">
-        {/* Logo */}
-        <div className="text-2xl font-bold">
+      <nav className="max-w-7xl mx-auto  flex flex-wrap md:justify-between items-center py-6 text-white">
+        <div className="text-[35px] font-bold w-full">
           <NavLink to="/" className="hover:opacity-80 transition">
-            MyApp
+            Create Users
           </NavLink>
         </div>
-
-        {/* Navigation Links */}
-        <div className="flex gap-6">
+        <div className="flex flex-wrap flex-col gap-6 pt-10">
           <NavLink
             to="/users"
             className={({ isActive }) =>
-              `text-lg font-medium ${
+              `text-[25px] font-medium ${
                 isActive ? "border-b-2 border-white" : "hover:text-gray-200"
               } transition`
             }
           >
-            Users
+            Users Info
           </NavLink>
           <NavLink
             to="/create"
             className={({ isActive }) =>
-              `text-lg font-medium ${
+              `text-[25px] font-medium ${
                 isActive ? "border-b-2 border-white" : "hover:text-gray-200"
               } transition`
             }
           >
-            Create User
+            Create Users
           </NavLink>
         </div>
       </nav>

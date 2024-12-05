@@ -23,18 +23,14 @@ const Users = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 hover:scale-0.4">
-      <div className="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-          Users
-        </h2>
-        <ul className="space-y-6">
+    <div className="min-h-screen gap-6 bg-slate-500 p-1">
+        <ul className="bg-[url('https://as1.ftcdn.net/v2/jpg/06/29/34/76/1000_F_629347615_CiS6R2AfVEaxllJSHoJ7FcQcXRhmNaVo.jpg')] bg-cover bg-center w-full grid grid-cols-4 gap-8 rounded-xl p-4 min-h-screen ">
           {users.map((user) => (
             <li
               key={user.id}
-              className="border rounded-lg p-6 flex justify-between items-center shadow-md"
+              className="flex flex-wrap h-72 flex-col items-center justify-around w-full bg-white rounded-xl p-5"
             >
-              <div>
+              <div className=" w-full flex flex-wrap flex-col gap-2">
                 <p className="text-lg font-semibold">
                   Name: {user.firstname} {user.lastname}
                 </p>
@@ -42,16 +38,16 @@ const Users = () => {
                 <p className="text-gray-600">Profession: {user.profession}</p>
                 <p className="text-gray-600">Gender: {user.gender}</p>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex justify-between gap-4 w-full">
                 <button
                   onClick={() => handleEdit(user)}
-                  className="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition"
+                  className="bg-green-500 w-[45%] text-white px-6 py-2 rounded-lg hover:bg-green-800 transition"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDelete(user.id)}
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+                  className="bg-red-500 text-white w-[45%] px-4 py-2 rounded-lg hover:bg-red-600 transition"
                 >
                   Delete
                 </button>
@@ -60,7 +56,6 @@ const Users = () => {
           ))}
         </ul>
 
-        {/* Modal for Deleting User */}
         {modal.show && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
@@ -88,7 +83,6 @@ const Users = () => {
           </div>
         )}
       </div>
-    </div>
   );
 };
 
